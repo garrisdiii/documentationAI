@@ -34,8 +34,11 @@ Date of Note Submission: ${new Date().toLocaleDateString()}
 Arrival Time: ${arrival}
 Leave Time: ${leave}
 Total Hours: ${calculateHours(arrival, leave)}
-Summarized Note: Participant was ${mood.toLowerCase()}. ${goals ? \`Goal progress included: \${goals}\` : "No goal progress noted."} ${incidents ? \`Incident Report: \${incidents}\` : "No incidents reported."}`;
-
+Summarized Note: Participant was ${mood.toLowerCase()}. ${
+  goals ? "Goal progress included: " + goals : "No goal progress noted."
+} ${
+  incidents ? "Incident Report: " + incidents : "No incidents reported."
+}`;
     setNote(summary);
   };
 
